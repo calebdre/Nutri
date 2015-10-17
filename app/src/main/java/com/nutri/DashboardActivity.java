@@ -1,5 +1,7 @@
 package com.nutri;
 
+import android.content.Intent;
+import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -26,7 +28,7 @@ import java.util.HashMap;
 
 public class DashboardActivity extends AppCompatActivity {
 
-//    @Bind(R.id.chart) RadarChart mChart;
+    @Bind(R.id.chart) RadarChart mChart;
     @Bind(R.id.dashboardSuggestionsList) ListView suggestionsListView;
 
     private String[] mParties = new String[] {"Party A", "Party B", "Party C", "Party D", "Party E", "Party F", "Party G", "Party H", "Party I"};
@@ -40,17 +42,9 @@ public class DashboardActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
 //        setSupportActionBar(toolbar);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
-
-//        RadarChartGenerator chartGenerator = new RadarChartGenerator(mChart, mParties);
-//        chartGenerator.generate();
+        mChart.setTouchEnabled(false);
+        RadarChartGenerator chartGenerator = new RadarChartGenerator(mChart, mParties);
+        chartGenerator.generate();
 
         Food apple = new Food("apple", "someimage.jpg", new NutritionInfo(1,1,1,1,1,1,1,1,1,1));
         Food pizza = new Food("pizza", "someimage.jpg", new NutritionInfo(2,2,2,2,2,2,2,2,2,2));
@@ -63,5 +57,10 @@ public class DashboardActivity extends AppCompatActivity {
 
         SuggestionListAdapter suggestionAdapter = new SuggestionListAdapter(this, suggestions);
         suggestionsListView.setAdapter(suggestionAdapter);
+    }
+
+    public void startCamera(View view) {
+        Intent startIntakeProcessingActivityIntent = new Intent(this, IntakeProcessingActivity.class);
+        startActivity(startIntakeProcessingActivityIntent);
     }
 }

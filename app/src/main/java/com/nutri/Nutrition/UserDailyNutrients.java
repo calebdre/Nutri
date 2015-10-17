@@ -1,4 +1,4 @@
-
+package com.nutri.Nutrition;
 
 public class UserDailyNutrients {
 	/*User inputs picture

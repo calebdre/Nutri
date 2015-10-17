@@ -2,7 +2,7 @@ package com.nutri.Nutrition;
 
 public class NutritionInfo {
 	private int calories, protein, fat, carbs, sugars, calcium, potassium, sodium, vitA, vitC;
-	public String[] allFields = new String[]{
+	public static String[] allFields = new String[]{
 		"calories", "protein", "fat", "carbs", "sugars", "calcium", "potassium", "sodium", "vitA", "vitC"
 	};
 
