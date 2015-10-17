@@ -1,15 +1,26 @@
 package com.nutri;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
+import com.microsoft.windowsazure.mobileservices.MobileServiceClient;
+import com.microsoft.windowsazure.mobileservices.http.ServiceFilterResponse;
+import com.microsoft.windowsazure.mobileservices.table.TableOperationCallback;
+
+import java.net.MalformedURLException;
+import java.util.Arrays;
 
 public class LoginActivity extends AppCompatActivity {
+
+    private MobileServiceClient mClient;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +37,29 @@ public class LoginActivity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+
+        try {
+            mClient = new MobileServiceClient(
+                    "https://nutrition9.azure-mobile.net/",
+                    "RLCKCWpguLkTURJzblQjEEECQZUxUk15",
+                    this
+            );
+            final Context context = this;
+            Item item = new Item();
+            item.Text = "Awesome item";
+            mClient.getTable(Item.class).insert(item, new TableOperationCallback<Item>() {
+                public void onCompleted(Item entity, Exception exception, ServiceFilterResponse response) {
+                    if (exception == null) {
+                        Toast.makeText(context, "success", Toast.LENGTH_LONG).show();
+                    } else {
+//                        Log.d("AZURE", Arrays.toString(exception));
+                    }
+                }
+            });
+        } catch (MalformedURLException e) {
+            e.printStackTrace();
+        }
+
     }
 
     @Override
