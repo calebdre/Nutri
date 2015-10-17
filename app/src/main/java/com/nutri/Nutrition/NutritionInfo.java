@@ -1,89 +1,61 @@
 package com.nutri.Nutrition;
 
 public class NutritionInfo {
-	public String calories, protein, fat, carbs, sugars, calcium, potassium, sodium, vitA, vitC;
+	private int calories, protein, fat, carbs, sugars, calcium, potassium, sodium, vitA, vitC;
 	public String[] allFields = new String[]{
 		"calories", "protein", "fat", "carbs", "sugars", "calcium", "potassium", "sodium", "vitA", "vitC"
 	};
-	
-	public String getCalories() {
-		return calories;
-	}
 
-	public void setCalories(String calories) {
-		this.calories = calories;
-	}
+    public NutritionInfo(int calories, int protein, int fat, int carbs, int sugars, int calcium, int potassium, int sodium, int vitA, int vitC) {
+        this.calories = calories;
+        this.protein = protein;
+        this.fat = fat;
+        this.carbs = carbs;
+        this.sugars = sugars;
+        this.calcium = calcium;
+        this.potassium = potassium;
+        this.sodium = sodium;
+        this.vitA = vitA;
+        this.vitC = vitC;
+    }
 
-	public String getProtein() {
-		return protein;
-	}
+    public int getCalories() {
+        return calories;
+    }
 
-	public void setProtein(String protein) {
-		this.protein = protein;
-	}
+    public int getProtein() {
+        return protein;
+    }
 
-	public String getFat() {
-		return fat;
-	}
+    public int getFat() {
+        return fat;
+    }
 
-	public void setFat(String fat) {
-		this.fat = fat;
-	}
+    public int getCarbs() {
+        return carbs;
+    }
 
-	public String getCarbs() {
-		return carbs;
-	}
+    public int getSugars() {
+        return sugars;
+    }
 
-	public void setCarbs(String carbs) {
-		this.carbs = carbs;
-	}
+    public int getCalcium() {
+        return calcium;
+    }
 
-	public String getSugars() {
-		return sugars;
-	}
+    public int getPotassium() {
+        return potassium;
+    }
 
-	public void setSugars(String sugars) {
-		this.sugars = sugars;
-	}
+    public int getSodium() {
+        return sodium;
+    }
 
-	public String getCalcium() {
-		return calcium;
-	}
+    public int getVitA() {
+        return vitA;
+    }
 
-	public void setCalcium(String calcium) {
-		this.calcium = calcium;
-	}
-
-	public String getPotassium() {
-		return potassium;
-	}
-
-	public void setPotassium(String potassium) {
-		this.potassium = potassium;
-	}
-
-	public String getSodium() {
-		return sodium;
-	}
-
-	public void setSodium(String sodium) {
-		this.sodium = sodium;
-	}
-
-	public String getVitA() {
-		return vitA;
-	}
-
-	public void setVitA(String vitA) {
-		this.vitA = vitA;
-	}
-
-	public String getVitC() {
-		return vitC;
-	}
-
-	public void setVitC(String vitC) {
-		this.vitC = vitC;
-	}
-	
+    public int getVitC() {
+        return vitC;
+    }
 }

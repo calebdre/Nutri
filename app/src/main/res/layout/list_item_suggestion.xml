@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="horizontal"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+        android:padding="15dp">
+    <TextView android:text="Some Food" android:id="@+id/suggestion_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="25dp" android:textSize="13sp" android:layout_gravity="center_vertical"/>
+
+    <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:gravity="center" android:orientation="horizontal">
+        <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="vertical" android:layout_marginRight="15dp">
+            <TextView android:text="Calories" android:id="@+id/suggestion_label1" android:textColor="@color/faded_text" android:textSize="9sp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <TextView android:text="25" android:id="@+id/suggestion_value1" android:textSize="12sp" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+        </LinearLayout>
+        <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="vertical" android:layout_marginRight="15dp">
+            <TextView android:text="Calories" android:id="@+id/suggestion_label2" android:textColor="@color/faded_text" android:textSize="9sp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <TextView android:text="25" android:id="@+id/suggestion_value2" android:textSize="12sp" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+        </LinearLayout>
+        <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="vertical" android:layout_marginRight="15dp">
+            <TextView android:text="Calories" android:id="@+id/suggestion_label3" android:textColor="@color/faded_text" android:textSize="9sp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <TextView android:text="25" android:id="@+id/suggestion_value3" android:textSize="12sp" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+        <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="vertical" android:layout_marginRight="15dp">
+            <TextView android:text="Calories" android:id="@+id/suggestion_label4" android:textColor="@color/faded_text" android:textSize="9sp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <TextView android:text="25" android:id="@+id/suggestion_value4" android:textSize="12sp" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

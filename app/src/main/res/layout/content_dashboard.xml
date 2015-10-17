@@ -15,13 +15,16 @@
         tools:context="com.nutri.DashboardActivity">
 
     <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_gravity="center" android:text="Dashboard"/>
-    <com.github.mikephil.charting.charts.RadarChart
-            android:id="@+id/chart"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            />
+    <!--<com.github.mikephil.charting.charts.RadarChart-->
+            <!--android:id="@+id/chart"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--/>-->
 
-    <ListView android:id="@+id/dashboardSuggestionsList" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_gravity="center"/>
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Suggestions:" android:textSize="18dp"/>
+    <ListView android:divider="@color/colorDivider"
+              android:dividerHeight="1dp"
+              android:id="@+id/dashboardSuggestionsList" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_gravity="center"/>
 
 
 </LinearLayout>
