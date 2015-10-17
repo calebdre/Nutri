@@ -1,3 +1,5 @@
+package com.nutri.Nutrition;
+
 public class CalculateNutrients {
 
 	private int calories, protein, fat, carbs, sugars, calcium, potassium, sodium, vitA, vitC;

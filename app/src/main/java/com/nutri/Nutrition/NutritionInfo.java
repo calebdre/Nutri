@@ -1,3 +1,4 @@
+package com.nutri.Nutrition;
 
 public class NutritionInfo {
 	public String calories, protein, fat, carbs, sugars, calcium, potassium, sodium, vitA, vitC;
